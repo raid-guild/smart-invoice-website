@@ -3,8 +3,8 @@ import React from 'react';
 
 export function HeroSection({ ...props }) {
   return (
-    <Flex justify="center" align="center" background="gray.background">
-      <Flex paddingY={20} paddingX={20} width="100%" {...props}>
+    <Flex justify="center" align="center" background="white">
+      <Flex paddingY={20} paddingX={20} width="100%" justify='space-between' align='center' {...props}>
         <VStack align="left" gap={4}>
           <Box
             textColor="charcoal"
@@ -33,6 +33,7 @@ export function HeroSection({ ...props }) {
         </VStack>
 
         {/* Image */}
+        <Box background="grey" width={536} height={451} />
       </Flex>
     </Flex>
   );

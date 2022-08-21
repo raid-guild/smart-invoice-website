@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-import { CheckSquareIcon } from '../icons/CheckSquare';
+import { CustomIcon } from '../icons/CheckSquare';
 
 export function FeatureEscrow({ ...props }) {
   return (
@@ -33,11 +33,10 @@ export function FeatureEscrow({ ...props }) {
           <Grid gridTemplateColumns="repeat(2, 260px)" gap={8} rowGap={10}>
             <GridItem>
               <Icon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='client'
               />
               <Text mt={2}>
                 Do business with anyone, anywhere, even if you don’t know or
@@ -46,11 +45,10 @@ export function FeatureEscrow({ ...props }) {
             </GridItem>
             <GridItem>
               <Icon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='trust'
               />
               <Text mt={2}>
                 Gain the peace of mind that you will get paid if you do the work
@@ -58,11 +56,10 @@ export function FeatureEscrow({ ...props }) {
             </GridItem>
             <GridItem>
               <Icon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='progress'
               />
               <Text mt={2}>
                 Get paid as you complete project milestones, instead of at the
@@ -71,11 +68,10 @@ export function FeatureEscrow({ ...props }) {
             </GridItem>
             <GridItem>
               <Icon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='warning'
               />
               <Text mt={2}>Protect yourself from chargebacks and fraud</Text>
             </GridItem>

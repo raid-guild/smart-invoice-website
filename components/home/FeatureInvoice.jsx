@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-import { CheckSquareIcon } from '../icons/CheckSquare';
+import { CheckSquareIcon, CustomIcon } from '../icons/CheckSquare';
 
 export function FeatureInvoice({ ...props }) {
   return (
@@ -35,45 +35,41 @@ export function FeatureInvoice({ ...props }) {
             The smart way to get paid as a web3 freelancer.
           </Heading>
           <List spacing={6}>
-            <ListItem display="flex" alignItems="center">
+            <ListItem display="flex" alignItems="center" gap={4}>
               <ListIcon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='avoid'
               />
               <Text>
                 Prevent clients sending funds to the wrong wallet address
               </Text>
             </ListItem>
-            <ListItem display="flex" alignItems="center">
+            <ListItem display="flex" alignItems="center" gap={4}>
               <ListIcon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='menu'
               />
               <Text>Stay organized with all of your invoices in one place</Text>
             </ListItem>
-            <ListItem display="flex" alignItems="center">
+            <ListItem display="flex" alignItems="center" gap={4}>
               <ListIcon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
+                as={CustomIcon}
                 width={30}
                 height={30}
+                type='status'
               />
               <Text>Quickly see the status of each invoice</Text>
             </ListItem>
-            <ListItem display="flex" alignItems="center">
+            <ListItem display="flex" alignItems="center" gap={4}>
               <ListIcon
-                as={CheckSquareIcon}
-                color="blue.1"
-                checkColor="white"
-                width={30}
-                height={30}
+                as={CustomIcon}
+                width={20}
+                height={20}
+                type='pdf'
               />
               <Text>Download PDFs of each invoice for your records</Text>
             </ListItem>

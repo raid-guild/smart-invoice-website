@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-import { CheckSquareIcon } from '../icons/CheckSquare';
+import { CustomIcon } from '../icons/CheckSquare';
 
 export function FeatureArbitration({ ...props }) {
   return (
@@ -33,11 +33,10 @@ export function FeatureArbitration({ ...props }) {
         <Grid gridTemplateColumns="repeat(2, 260px)" gap={8} rowGap={10}>
           <GridItem>
             <Icon
-              as={CheckSquareIcon}
-              color="blue.1"
-              checkColor="white"
+              as={CustomIcon}
               width={30}
               height={30}
+              type='scale'
             />
             <Text mt={2}>
               Benefit from impartial decision making in case of conflict
@@ -45,11 +44,10 @@ export function FeatureArbitration({ ...props }) {
           </GridItem>
           <GridItem>
             <Icon
-              as={CheckSquareIcon}
-              color="blue.1"
-              checkColor="white"
+              as={CustomIcon}
               width={30}
               height={30}
+              type='piechart'
             />
             <Text mt={2}>
               Maximum arbitration service fee of 5%, automatically deducted from
@@ -58,11 +56,10 @@ export function FeatureArbitration({ ...props }) {
           </GridItem>
           <GridItem>
             <Icon
-              as={CheckSquareIcon}
-              color="blue.1"
-              checkColor="white"
+              as={CustomIcon}
               width={30}
               height={30}
+              type='search'
             />
             <Text mt={2}>
               No need to find a third party arbitrator on your own

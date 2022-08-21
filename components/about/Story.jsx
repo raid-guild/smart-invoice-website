@@ -9,7 +9,7 @@ export function Story({ ...props }) {
       adjustColumns()
       window.addEventListener('resize', adjustColumns)
     }
-  }, [window, window.innerWidth])
+  })
 
   function adjustColumns() {
     if (window.innerWidth < 800) {
@@ -22,7 +22,7 @@ export function Story({ ...props }) {
   return (
     <Box>
       <Flex direction='column' gap={10} width='100%' padding={20} {...props}>
-        <Grid gridTemplateColumns={`repeat(${columns}, 1fr)`} gap={10} width='100%'>
+        <Grid gridTemplateColumns={`repeat(${columns}, 1fr)`} gap={14} width='100%'>
           <GridItem display='flex' flexDir='column' align='left' gap={4} order={1}>
             <Heading>Our Story</Heading>
             <Text>
