@@ -1,6 +1,9 @@
 import { Box, Flex, Text, Heading, Grid, VStack, GridItem } from "@chakra-ui/layout";
 import { useEffect, useState } from "react";
 
+import NextImage from "next/image";
+import asset3 from "../../public/assets/product-about-3.svg"
+
 export function Story({ ...props }) {
   const [columns, setColumns] = useState(2)
 
@@ -100,7 +103,8 @@ export function Story({ ...props }) {
             </Text>
           </GridItem>
           <GridItem order={6}>
-            <Box background='gray' minH={300} />
+            <NextImage src={asset3} />
+            {/* <Box background='gray' minH={300} /> */}
           </GridItem>
         </Grid>
       </Flex>

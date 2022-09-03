@@ -11,11 +11,33 @@ import {
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 import logo from '../../public/logos/smart-invoice/white.svg';
 
 export function Footer({ ...props }) {
+  const [email, setEmail] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+
+  async function submitForm(e) {
+    e.preventDefault()
+    setSubmitting(true)
+    try {
+      await fetch(process.env.GETFORM_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+      console.log("Submitted")
+      setEmail('')
+    } catch (error) {
+      console.error(error)
+    }
+    setSubmitting(false)
+  }
+
   return (
     <Box background="blue.dark">
       <Flex
@@ -38,29 +60,38 @@ export function Footer({ ...props }) {
             space.
           </Text>
         </Box>
-        <FormControl
-          display="flex"
-          alignItems="center"
-          justifyContent="right"
-          maxWidth={500}
-        >
-          <Input
-            type="email"
-            borderRightRadius={0}
-            background="white"
-            textColor="gray.dark"
-            maxWidth={350}
-          />
-          <Button
-            background="blue.1"
-            textColor="white"
-            fontWeight={700}
-            fontSize={18}
-            borderLeftRadius={0}
+        <form onSubmit={e => submitForm(e)} method='POST'>
+          <FormControl
+            display="flex"
+            alignItems="center"
+            justifyContent="right"
+            maxWidth={500}
           >
-            Add me!
-          </Button>
-        </FormControl>
+            <Input
+              type="email"
+              name='email'
+              borderRightRadius={0}
+              background="white"
+              color="gray.dark"
+              width={300}
+              value={email}
+              onChange={e => setEmail(e.currentTarget.value)}
+              placeholder='Email address'
+              _placeholder={{ color: 'gray.light' }}
+            />
+            <Button
+              type='submit'
+              background="blue.1"
+              textColor="white"
+              fontWeight={700}
+              fontSize={18}
+              borderLeftRadius={0}
+              isLoading={submitting}
+            >
+              Add me!
+            </Button>
+          </FormControl>
+        </form>
       </Flex>
       <Divider background="#DCF2ED" />
       <Flex

@@ -9,6 +9,8 @@ import georgehPfp from '../../public/pfp/georgeh.svg'
 import spengrahPfp from '../../public/pfp/spengrah.svg'
 import dan13ramPfp from '../../public/pfp/dan13ram.svg'
 import manoPfp from '../../public/pfp/manolingam.svg'
+import jaqiPfp from '../../public/pfp/jaqi.svg'
+import bingoPfp from '../../public/pfp/bingo.svg'
 
 import facebookIcon from '../../public/icons/socials/facebook.svg'
 import githubIcon from '../../public/icons/socials/github.svg'
@@ -60,12 +62,18 @@ export function TeamSection({...props}) {
       twitter: '#'
     },
     {
-      name: 'arentweall',
-      position: 'Developer',
-      pfp: launchninjaPfp,
+      name: 'Jaqi',
+      position: 'Designer',
+      pfp: jaqiPfp,
       facebook: '#',
       twitter: '#',
       github: '#'
+    },
+    {
+      name: 'Bingo',
+      position: 'Designer',
+      pfp: bingoPfp,
+      twitter: '#'
     }
   ]
 
