@@ -11,13 +11,29 @@ import {
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import logo from '../../public/logos/smart-invoice/white.svg';
 
 export function Footer({ ...props }) {
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [flexDirection, setFlexDirection] = useState('row')
+
+  useEffect(() => {
+    if (window) {
+      toggleDirection()
+      window.addEventListener('resize', toggleDirection)
+    }
+  })
+
+  function toggleDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column')
+    } else {
+      setFlexDirection('row')
+    }
+  }
 
   async function submitForm(e) {
     e.preventDefault()
@@ -41,10 +57,12 @@ export function Footer({ ...props }) {
   return (
     <Box background="blue.dark">
       <Flex
+        direction={flexDirection}
         justify="space-between"
         align="center"
         paddingX={20}
         paddingY={10}
+        gap={10}
         {...props}
       >
         <Box textColor="white">
@@ -73,7 +91,8 @@ export function Footer({ ...props }) {
               borderRightRadius={0}
               background="white"
               color="gray.dark"
-              width={300}
+              maxWidth={300}
+              minWidth={200}
               value={email}
               onChange={e => setEmail(e.currentTarget.value)}
               placeholder='Email address'
@@ -86,6 +105,7 @@ export function Footer({ ...props }) {
               fontWeight={700}
               fontSize={18}
               borderLeftRadius={0}
+              paddingX={10}
               isLoading={submitting}
             >
               Add me!
@@ -95,11 +115,13 @@ export function Footer({ ...props }) {
       </Flex>
       <Divider background="#DCF2ED" />
       <Flex
+        direction={flexDirection === 'column' ? 'column-reverse' : 'row'}
         justify="space-between"
         align="center"
         paddingX={20}
         paddingY={4}
         textColor="white"
+        rowGap={4}
         {...props}
       >
         <NextImage src={logo} width={160} height={25.34} />
@@ -107,13 +129,13 @@ export function Footer({ ...props }) {
           <NextLink href="/" passHref>
             <Link>Home</Link>
           </NextLink>
-          <NextLink href="#" passHref>
+          <NextLink href="https://docs.smartinvoice.xyz/" passHref>
             <Link>Documentation</Link>
           </NextLink>
-          <NextLink href="#" passHref>
+          <NextLink href="https://docs.smartinvoice.xyz/docs/FAQ" passHref>
             <Link>Support</Link>
           </NextLink>
-          <NextLink href="#" passHref>
+          <NextLink href="https://twitter.com/SmartInvoiceXYZ" passHref>
             <Link>Twitter</Link>
           </NextLink>
         </Flex>

@@ -18,6 +18,7 @@ export function FeatureCrypto({ ...props }) {
         <Grid
           gridTemplateColumns="repeat(auto-fit, minmax(200px, 1fr))"
           width='100%'
+          gap={10}
         >
           <GridItem display='flex' justifyContent='center'>
             <VStack maxWidth={310}>

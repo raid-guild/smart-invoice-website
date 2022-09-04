@@ -11,13 +11,30 @@ import {
   Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function DemoSection({ ...props }) {
+  const [flexDirection, setFlexDirection] = useState('row')
+
+  useEffect(() => {
+    if (window) {
+      toggleDirection()
+      window.addEventListener('resize', toggleDirection)
+    }
+  })
+
+  function toggleDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column')
+    } else {
+      setFlexDirection('row')
+    }
+  }
+
   return (
-    <Flex justify="center" align="center">
+    <Flex justify="center" align="center" overflowX='hidden'>
       <Box padding={20} width="100%" {...props}>
-        <Flex justify="space-between" align="end">
+        <Flex direction={flexDirection} justify="space-between" align={flexDirection === 'column' ? 'center' : 'end'} gap={6}>
           <Box maxWidth={700}>
             <Heading mb={2}>Designed for all freelancers</Heading>
             <Text>
@@ -31,8 +48,8 @@ export function DemoSection({ ...props }) {
           </NextLink>
         </Flex>
         <Divider background="blue.1" mt={8} mb={8} />
-        <Flex justify="space-between" gap={10}>
-          <Accordion width={380} textColor="white" defaultIndex={0}>
+        <Flex direction={flexDirection === 'column' ? 'column-reverse' : 'row'} justify="space-between" align={flexDirection === 'column' && 'center'} gap={10}>
+          <Accordion width={flexDirection === 'column' ? '100%' : 380} textColor="white" defaultIndex={0}>
             <AccordionItem mb={2}>
               <AccordionButton
                 fontWeight={700}

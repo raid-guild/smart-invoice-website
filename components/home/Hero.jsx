@@ -1,10 +1,27 @@
 import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function HeroSection({ ...props }) {
+  const [flexDirection, setFlexDirection] = useState('row')
+
+  useEffect(() => {
+    if (window) {
+      toggleDirection()
+      window.addEventListener('resize', toggleDirection)
+    }
+  })
+
+  function toggleDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column')
+    } else {
+      setFlexDirection('row')
+    }
+  }
+
   return (
-    <Flex justify="center" align="center" background="white">
-      <Flex paddingY={20} paddingX={20} width="100%" justify='space-between' align='center' {...props}>
+    <Flex justify="center" align="center" background="white" overflowX='hidden'>
+      <Flex direction={flexDirection} gap={10} paddingY={20} paddingX={20} width="100%" justify='space-between' align='center' {...props}>
         <VStack align="left" gap={4}>
           <Box
             textColor="charcoal"

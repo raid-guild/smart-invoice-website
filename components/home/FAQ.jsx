@@ -13,11 +13,11 @@ import NextLink from 'next/link';
 
 export function FAQSection() {
   return (
-    <Flex padding={20} direction="column" align="center">
+    <Flex padding={20} direction="column" align="center" overflowX='hidden'>
       <Heading fontSize={40} textAlign="center">
         Frequently asked questions
       </Heading>
-      <Accordion allowToggle width={600} mt={10}>
+      <Accordion allowToggle maxWidth={600} width='100%' mt={10}>
         <AccordionItem
           border="1px solid #C2CFE0"
           borderRadius={10}
@@ -31,6 +31,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Can I accept credit card payments and ACH transfers?</Text>
             <AccordionIcon color="blue.1" />
@@ -52,6 +53,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>What cryptocurrencies can I accept payment with?</Text>
             <AccordionIcon color="blue.1" />
@@ -78,6 +80,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Can I accept Bitcoin (BTC) payments?</Text>
             <AccordionIcon color="blue.1" />
@@ -99,6 +102,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Is this software really free?</Text>
             <AccordionIcon color="blue.1" />
@@ -120,6 +124,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Do you have your own token?</Text>
             <AccordionIcon color="blue.1" />
@@ -141,6 +146,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>How do you make money?</Text>
             <AccordionIcon color="blue.1" />
@@ -162,6 +168,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Why are you doing this for free?</Text>
             <AccordionIcon color="blue.1" />
@@ -194,6 +201,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Do I need to install any software?</Text>
             <AccordionIcon color="blue.1" />
@@ -215,6 +223,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>How do I create an account?</Text>
             <AccordionIcon color="blue.1" />
@@ -241,6 +250,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>How private are my transactions?</Text>
             <AccordionIcon color="blue.1" />
@@ -270,6 +280,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>How does arbitrations work?</Text>
             <AccordionIcon color="blue.1" />
@@ -296,6 +307,7 @@ export function FAQSection() {
             fontSize={18}
             fontWeight={700}
             borderRadius={10}
+            textAlign='left'
           >
             <Text>Do you provide support if I need help?</Text>
             <AccordionIcon color="blue.1" />

@@ -83,7 +83,7 @@ export function Testimonials() {
             paddingY={6}
           >
             <NextImage src={quoteIcon} width={41} height={33} />
-            <Heading textColor="white" fontSize={50} fontWeight={700} mt={10}>
+            <Heading textColor="white" size='2xl' fontWeight={700} mt={10}>
               {t.quote}
             </Heading>
             <Box textAlign="center" mt={10}>

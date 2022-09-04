@@ -7,17 +7,38 @@ import {
   Icon,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { CustomIcon } from '../icons/CheckSquare';
 
 export function FeatureArbitration({ ...props }) {
+  const [flexDirection, setFlexDirection] = useState('row')
+  const [columns, setColumns] = useState(2)
+
+  useEffect(() => {
+    if (window) {
+      toggleDirection()
+      window.addEventListener('resize', toggleDirection)
+    }
+  })
+
+  function toggleDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column')
+      setColumns(1)
+    } else {
+      setFlexDirection('row')
+      setColumns(2)
+    }
+  }
+
   return (
-    <Flex justify="center" align="center">
+    <Flex justify="center" align="center" overflowX='hidden'>
       <Flex
-        direction="row"
+        direction={flexDirection}
         padding={20}
         justify="space-between"
+        align={flexDirection === 'column' && 'center'}
         gap={10}
         width="100%"
         {...props}
@@ -30,7 +51,7 @@ export function FeatureArbitration({ ...props }) {
           <Heading mb={6}>without the stress.</Heading>
         </Box>
 
-        <Grid gridTemplateColumns="repeat(2, 260px)" gap={8} rowGap={10}>
+        <Grid gridTemplateColumns={`repeat(${columns}, 260px)`} gap={8} rowGap={10}>
           <GridItem>
             <Icon
               as={CustomIcon}

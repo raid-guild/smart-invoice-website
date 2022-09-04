@@ -7,15 +7,32 @@ import {
   ListItem,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { CheckSquareIcon, CustomIcon } from '../icons/CheckSquare';
+import { CustomIcon } from '../icons/CheckSquare';
 
 export function FeatureInvoice({ ...props }) {
+  const [flexDirection, setFlexDirection] = useState('row')
+
+  useEffect(() => {
+    if (window) {
+      toggleDirection()
+      window.addEventListener('resize', toggleDirection)
+    }
+  })
+
+  function toggleDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column-reverse')
+    } else {
+      setFlexDirection('row')
+    }
+  }
+
   return (
-    <Flex justify="center" align="center">
+    <Flex justify="center" align="center" overflowX='hidden'>
       <Flex
-        direction="row"
+        direction={flexDirection}
         padding={20}
         justify="space-between"
         align="center"

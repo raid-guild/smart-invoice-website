@@ -34,7 +34,7 @@ export const CheckSquareIcon = ({ ...props }) => (
     <rect width="30" height="30" rx="12" fill="currentColor" />
     <path
       d="M12 19.17L7.83 15L6.41 16.41L12 22L24 9.99997L22.59 8.58997L12 19.17Z"
-      fill={props.checkColor}
+      fill={props.checkcolor}
     />
   </Icon>
 );

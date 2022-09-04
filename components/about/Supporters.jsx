@@ -1,11 +1,32 @@
 import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import NextImage from 'next/image'
+import { useEffect, useState } from "react";
 
 import ldLogo from '../../public/logos/lexdao.svg';
 import mdLogo from '../../public/logos/molochdao.svg';
 import rgLogo from '../../public/logos/raidguild.svg';
 
 export function Supporters({ ...props }) {
+  const [flexDirection, setFlexDirection] = useState('row')
+  const [alignment, setAlignment] = useState('flex-start')
+
+  useEffect(() => {
+    if (window) {
+      changeFlexDirection()
+      window.addEventListener('resize', changeFlexDirection)
+    }
+  })
+
+  function changeFlexDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column')
+      setAlignment('center')
+    } else {
+      setFlexDirection('row')
+      setAlignment('flex-start')
+    }
+  }
+
   return (
     <Box background='white' textAlign='center' padding={20}>
       <Heading mb={4}>
@@ -14,7 +35,7 @@ export function Supporters({ ...props }) {
       <Text>
         Meet the organizations helping Smart Invoice succeed.
       </Text>
-      <Flex justify='space-evenly' gap={20} mt={10} {...props}>
+      <Flex direction={flexDirection} justify='space-evenly' align={alignment} gap={20} mt={10} {...props}>
         <VStack maxWidth={320} gap={8}>
           <NextImage src={rgLogo} width={180} height={47.45} />
           <Text>

@@ -1,17 +1,34 @@
 import { Box, Flex, Heading, Link, Text, VStack } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ldLogo from '../../public/logos/lexdao.svg';
 import mdLogo from '../../public/logos/molochdao.svg';
 import rgLogo from '../../public/logos/raidguild.svg';
 
 export function StoryOverviewSection({ ...props }) {
+  const [flexDirection, setFlexDirection] = useState('row')
+
+  useEffect(() => {
+    if (window) {
+      toggleDirection()
+      window.addEventListener('resize', toggleDirection)
+    }
+  })
+
+  function toggleDirection() {
+    if (window.innerWidth < 800) {
+      setFlexDirection('column')
+    } else {
+      setFlexDirection('row')
+    }
+  }
+
   return (
     <Flex justify="center" align="center" background="gray.background">
       <Flex
-        direction="row"
+        direction={flexDirection}
         padding={20}
         justify="space-between"
         gap={10}
