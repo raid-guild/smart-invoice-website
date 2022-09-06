@@ -18,25 +18,25 @@ export function Layout({ children }) {
         <meta property="og:image" content="/meta/home-graphic.png" />
         <meta property="og:description" content="Smart Invoice is an easy-to-use tool that provides web3 freelancers with cryptocurrency invoicing, escrow, and arbitration." />
         <link rel="icon" href="/logos/smart-invoice/icon-blue.svg" />
-        {/* <!-- Google tag (gtag.js) -->  */}
-        <Script
-          async
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-30565BWGW9`}
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-30565BWGW9');
-            `,
-          }}
-        />
       </Head>
+      {/* <!-- Google tag (gtag.js) -->  */}
+      <Script
+        async
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-30565BWGW9`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-30565BWGW9');
+          `,
+        }}
+      />
 
       <NavBar />
       <Box flexGrow={1}>{children}</Box>
