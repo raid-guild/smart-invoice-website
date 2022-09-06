@@ -12,6 +12,11 @@ export function Layout({ children }) {
       <Head>
         <title>Smart Invoice</title>
         <meta name="description" content="Smart Invoice is an easy-to-use tool that provides web3 freelancers with cryptocurrency invoicing, escrow, and arbitration." />
+        {/* <!-- Open Graph data --> */}
+        <meta property="og:title" content="Smart Invoice" />
+        <meta property="og:url" content="https://www.smartinvoice.xyz/" />
+        <meta property="og:image" content="/meta/home-graphic.png" />
+        <meta property="og:description" content="Smart Invoice is an easy-to-use tool that provides web3 freelancers with cryptocurrency invoicing, escrow, and arbitration." />
         <link rel="icon" href="/logos/smart-invoice/icon-blue.svg" />
         {/* <!-- Google tag (gtag.js) -->  */}
         <Script
