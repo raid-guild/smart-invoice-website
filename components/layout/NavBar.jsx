@@ -52,10 +52,10 @@ export function NavBar({ ...props }) {
             <NextLink href="/" passHref>
               <Link>Home</Link>
             </NextLink>
-            <NextLink href="https://docs.smartinvoice.xyz" passHref>
+            <NextLink href="https://help.smartinvoice.xyz" passHref>
               <Link target='_blank'>Documentation</Link>
             </NextLink>
-            <NextLink href="https://docs.smartinvoice.xyz/docs/FAQ" passHref>
+            <NextLink href="https://help.smartinvoice.xyz/article/7-get-support" passHref>
               <Link>Support</Link>
             </NextLink>
           </Flex>

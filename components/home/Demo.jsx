@@ -99,7 +99,7 @@ export function DemoSection({ ...props }) {
         <Flex direction={flexDirection === 'column' ? 'column-reverse' : 'row'} justify="space-between" align={flexDirection === 'column' && 'center'} gap={10}>
           <Accordion width={flexDirection === 'column' ? '100%' : 380} textColor="white" defaultIndex={0}>
             {demoItems.map((item, i) => (
-              <AccordionItem mb={2} key={i}>
+              <AccordionItem mb={2} key={i} border="none">
                 <AccordionButton
                   fontWeight={700}
                   fontSize={18}

@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading, Link, Text } from "@chakra-ui/react";
 import NextImage from 'next/image'
 import NextLink from 'next/link'
 
@@ -14,6 +14,7 @@ import bingoPfp from '../../public/pfp/bingo.svg'
 
 import facebookIcon from '../../public/icons/socials/facebook.svg'
 import githubIcon from '../../public/icons/socials/github.svg'
+import linkedinIcon from '../../public/icons/socials/linkedin.svg'
 import twitterIcon from '../../public/icons/socials/twitter.svg'
 import websiteIcon from '../../public/icons/socials/website.svg'
 
@@ -67,7 +68,7 @@ export function TeamSection({...props}) {
       position: 'Designer',
       pfp: jaqiPfp,
       twitter: 'https://twitter.com/jaclynlenee',
-      facebook: 'https://www.linkedin.com/in/jaclynlenee/',
+      linkedin: 'https://www.linkedin.com/in/jaclynlenee/',
       website: 'https://www.jaclynlenee.com/'
     },
     {
@@ -109,16 +110,23 @@ export function TeamSection({...props}) {
               <Flex justify='center' align='center' gap={4} mt={6}>
                 {member.facebook && (
                   <NextLink href={member.facebook} passHref>
-                    <Flex cursor='pointer'>
+                    <Link cursor='pointer' target='_blank'>
                       <NextImage src={facebookIcon} width={48} height={48} />
-                    </Flex>
+                    </Link>
                   </NextLink>
                 )}
                 {member.twitter && (
                   <NextLink href={member.twitter} passHref>
-                    <Flex cursor='pointer'>
+                    <Link cursor='pointer' target='_blank'>
                       <NextImage src={twitterIcon} width={48} height={48} />
-                    </Flex>
+                    </Link>
+                  </NextLink>
+                )}
+                {member.linkedin && (
+                  <NextLink href={member.linkedin} passHref>
+                    <Link cursor='pointer' target='_blank'>
+                      <NextImage src={linkedinIcon} width={48} height={48} />
+                    </Link>
                   </NextLink>
                 )}
                 {member.github && (
@@ -130,9 +138,9 @@ export function TeamSection({...props}) {
                 )}
                 {member.website && (
                   <NextLink href={member.website} passHref>
-                    <Flex cursor='pointer'>
+                    <Link cursor='pointer' target='_blank'>
                       <NextImage src={websiteIcon} width={48} height={48} />
-                    </Flex>
+                    </Link>
                   </NextLink>
                 )}
               </Flex>
