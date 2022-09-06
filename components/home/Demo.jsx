@@ -132,7 +132,7 @@ export function DemoSection({ ...props }) {
           </Accordion>
 
           {/* Image */}
-          <NextImage src={demoItems[active].img} width={600} />
+          <NextImage src={demoItems[active].img} width={750} />
         </Flex>
       </Box>
     </Flex>
