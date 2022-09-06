@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "out",
+    "site": "smart-invoice-website",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
