@@ -15,6 +15,7 @@ import bingoPfp from '../../public/pfp/bingo.svg'
 import facebookIcon from '../../public/icons/socials/facebook.svg'
 import githubIcon from '../../public/icons/socials/github.svg'
 import twitterIcon from '../../public/icons/socials/twitter.svg'
+import websiteIcon from '../../public/icons/socials/website.svg'
 
 export function TeamSection({...props}) {
   const teamMembers = [
@@ -22,68 +23,68 @@ export function TeamSection({...props}) {
       name: 'launchninja',
       position: 'Product Lead',
       pfp: launchninjaPfp,
-      twitter: '#'
+      twitter: 'https://twitter.com/launchninja0x'
     },
     {
       name: 'plor',
       position: 'Project Manager',
       pfp: plorPfp,
-      twitter: '#',
-      github: '#'
+      twitter: 'https://twitter.com/plor',
+      github: 'https://github.com/plor'
     },
     {
       name: 'Tufnel_Enterprises',
       position: 'Developer',
       pfp: tufnelPfp,
-      github: '#'
+      github: 'https://github.com/psparacino'
     },
     {
       name: 'georgeh',
       position: 'Developer',
       pfp: georgehPfp,
-      github: '#'
+      github: 'https://github.com/geovgy'
     },
     {
       name: 'spengrah',
       position: 'Developer',
       pfp: spengrahPfp,
-      twitter: '#'
+      twitter: 'https://twitter.com/spengrah'
     },
     {
       name: 'dan13ram',
       position: 'Developer',
       pfp: dan13ramPfp,
-      twitter: '#'
+      twitter: 'https://twitter.com/dan13ram'
     },
     {
       name: 'manolingam',
       position: 'Developer',
       pfp: manoPfp,
-      twitter: '#'
+      twitter: 'http://twitter.com/saimano1996'
     },
     {
       name: 'Jaqi',
       position: 'Designer',
       pfp: jaqiPfp,
-      facebook: '#',
-      twitter: '#',
-      github: '#'
+      twitter: 'https://twitter.com/jaclynlenee',
+      facebook: 'https://www.linkedin.com/in/jaclynlenee/',
+      website: 'https://www.jaclynlenee.com/'
     },
     {
       name: 'Bingo',
       position: 'Designer',
       pfp: bingoPfp,
-      twitter: '#'
+      website: 'https://www.bingothedesigner.com/'
     }
   ]
 
   return (
     <Box background='blue.dark' textColor='white' padding={20}>
       <Heading textAlign='center' textColor='white' mb={4}>
-        Our Team
+        A team of exceptional people
       </Heading>
       <Text textAlign='center'>
-        Meet the people behind Smart Invoice.
+        Meet the team, past and present, that’s worked to make crypto invoicing and escrow free for all web3 freelancers.
       </Text>
       <Flex width='100%' justify='center' align='center' mt={20}>
         <Grid gridTemplateColumns='repeat(auto-fit, minmax(200px, 1fr))' gap={6} width='100%' maxWidth={1000}>
@@ -124,6 +125,13 @@ export function TeamSection({...props}) {
                   <NextLink href={member.github} passHref>
                     <Flex cursor='pointer'>
                       <NextImage src={githubIcon} width={48} height={48} />
+                    </Flex>
+                  </NextLink>
+                )}
+                {member.website && (
+                  <NextLink href={member.website} passHref>
+                    <Flex cursor='pointer'>
+                      <NextImage src={websiteIcon} width={48} height={48} />
                     </Flex>
                   </NextLink>
                 )}

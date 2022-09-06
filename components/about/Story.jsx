@@ -2,6 +2,8 @@ import { Box, Flex, Text, Heading, Grid, VStack, GridItem } from "@chakra-ui/lay
 import { useEffect, useState } from "react";
 
 import NextImage from "next/image";
+import asset1 from "../../public/assets/about/rg-laptop-1.svg"
+import asset2 from "../../public/assets/about/escrow-invoice-original-2.svg"
 import asset3 from "../../public/assets/product-about-3.svg"
 
 export function Story({ ...props }) {
@@ -23,11 +25,11 @@ export function Story({ ...props }) {
   }
 
   return (
-    <Box>
-      <Flex direction='column' gap={10} width='100%' padding={20} {...props}>
+    <Flex width='100%' justify='center'>
+      <Flex direction='column' gap={4} width='100%' padding={20} {...props}>
+        <Heading>Our Story</Heading>
         <Grid gridTemplateColumns={`repeat(${columns}, 1fr)`} gap={14} width='100%'>
           <GridItem display='flex' flexDir='column' align='left' gap={4} order={1}>
-            <Heading>Our Story</Heading>
             <Text>
               In October 2020, a development service DAO by the name of RaidGuild realized they had a problem: there was no easy, or affordable, way to safely transact with their web3 clients.
             </Text>
@@ -57,10 +59,10 @@ export function Story({ ...props }) {
             </Text>
           </GridItem>
           <GridItem order={2}>
-            <Box background='gray' minH={300} />
+            <NextImage src={asset1} width={580} height={464.8} objectFit="cover" />
           </GridItem>
           <GridItem order={columns === 1 ? 4 : 3}>
-            <Box background='gray' minH={300} />
+            <NextImage src={asset2} width={580} height={402.38} objectFit="cover" />
           </GridItem>
           <GridItem display='flex' flexDir='column' align='left' gap={4} order={columns === 1 ? 3 : 4}>
             <Text fontWeight={700} fontStyle='italic'>
@@ -103,11 +105,10 @@ export function Story({ ...props }) {
             </Text>
           </GridItem>
           <GridItem order={6}>
-            <NextImage src={asset3} />
-            {/* <Box background='gray' minH={300} /> */}
+            <NextImage src={asset3} width={590} height={339.25} objectFit="cover" />
           </GridItem>
         </Grid>
       </Flex>
-    </Box>
+    </Flex>
   )
 }

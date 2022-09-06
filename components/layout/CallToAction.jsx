@@ -23,7 +23,7 @@ export function CallToAction({ ...props }) {
   }
 
   return (
-    <Flex background="blue.1">
+    <Flex background="blue.1" width='100%' justify='center'>
       <Flex
         direction={flexDirection}
         rowGap={10}
@@ -65,6 +65,7 @@ export function CallToAction({ ...props }) {
             fontSize={18}
             paddingY={6}
             paddingX={8}
+            _hover={{ background: 'rgba(255, 255, 255, 0.7)' }}
           >
             Open dApp
           </Button>

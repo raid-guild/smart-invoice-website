@@ -18,25 +18,32 @@ export function Testimonials() {
     {
       id: 1,
       quote:
-        "This is the best invoicing tool we've ever used to accept crypto payments. It rocks!",
-      name: 'John Smith',
-      title: 'Title',
-      company: 'Company',
+        "Super smooth, great UI. The most straightforward escrow.",
+      name: 'MadFinance team',
+      title: '',
+      company: '',
     },
     {
       id: 2,
-      quote: 'Another testimonial statement.',
-      name: 'Jane Doe',
-      title: 'Title',
-      company: 'Company',
+      quote: "This changes everything!",
+      name: '0xhanvalen',
+      title: 'Freelance Developer',
+      company: '',
     },
     {
       id: 3,
-      quote: 'Hello world!',
-      name: 'Joe Jones',
-      title: 'Title',
-      company: 'Company',
+      quote: "We're forking this!",
+      name: 'Based Ghouls Dev Team',
+      title: '',
+      company: ''
     },
+    {
+      id: 4,
+      quote: "That time we really got f***ed we forgot to use Smart Invoice.",
+      name: 'Ξ2T',
+      title: '',
+      company: '',
+    }
   ];
 
   useInterval(toggleInterval, 5000);
@@ -90,9 +97,21 @@ export function Testimonials() {
               <Text fontWeight={700} fontSize={18}>
                 {t.name}
               </Text>
-              <Text fontSize={16}>
-                {t.title}, {t.company}
-              </Text>
+              {(t.title && t.company) && (
+                <Text fontSize={16}>
+                  {t.title}, {t.company}
+                </Text>
+              )}
+              {(t.title && !t.company) && (
+                <Text fontSize={16}>
+                  {t.title}
+                </Text>
+              )}
+              {(!t.title && t.company) && (
+                <Text fontSize={16}>
+                  {t.company}
+                </Text>
+              )}
             </Box>
           </Flex>
         </Slide>

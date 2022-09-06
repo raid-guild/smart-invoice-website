@@ -8,8 +8,10 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
+import NextImage from "next/image";
 
 import { CustomIcon } from '../icons/CheckSquare';
+import productImg from '../../public/assets/home/invoices-list-screenshot.svg'
 
 export function FeatureInvoice({ ...props }) {
   const [flexDirection, setFlexDirection] = useState('row')
@@ -41,10 +43,13 @@ export function FeatureInvoice({ ...props }) {
         {...props}
       >
         {/* Image */}
-        <Box background="grey" width={536} height={451} />
+        <Box width={flexDirection === 'row' ? '50%' : '100%'}>
+          {/* <Box background="grey" width='100%' height={451} /> */}
+          <NextImage src={productImg} width={600} height={431.4} />
+        </Box>
 
         {/* Text */}
-        <Box>
+        <Box width={flexDirection === 'row' ? '50%' : '100%'}>
           <Text fontSize={16} fontWeight={700} textColor="blue.1">
             CRYPTOCURRENCY INVOICING
           </Text>

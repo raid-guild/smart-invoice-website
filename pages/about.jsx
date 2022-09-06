@@ -14,7 +14,7 @@ export default function About() {
       <Story maxWidth={1400} />
       <TeamSection maxWidth={1400} />
       <Supporters maxWidth={1400} />
-      <Testimonials maxWidth={1400} />
+      {/* <Testimonials maxWidth={1400} /> */}
       <CallToAction maxWidth={1400} />
     </Layout>
   )

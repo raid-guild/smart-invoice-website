@@ -7,6 +7,9 @@ export const colors = {
     3: '#1C59B3',
     4: '#0C3C84',
     dark: '#334D6E',
+    hover: {
+      1: 'rgba(61, 136, 248, 0.7)'
+    }
   },
   charcoal: '#323C47',
   gray: {

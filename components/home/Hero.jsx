@@ -1,5 +1,7 @@
 import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
+import NextImage from "next/image";
+import heroImg from '../../public/assets/home/hero-image.svg'
 
 export function HeroSection({ ...props }) {
   const [flexDirection, setFlexDirection] = useState('row')
@@ -20,7 +22,7 @@ export function HeroSection({ ...props }) {
   }
 
   return (
-    <Flex justify="center" align="center" background="white" overflowX='hidden'>
+    <Flex justify="center" align="center" background="gray.background" overflowX='hidden'>
       <Flex direction={flexDirection} gap={10} paddingY={20} paddingX={20} width="100%" justify='space-between' align='center' {...props}>
         <VStack align="left" gap={4}>
           <Box
@@ -29,14 +31,14 @@ export function HeroSection({ ...props }) {
             fontWeight={700}
             fontFamily="Poppins"
           >
-            <Heading>Crypto invoicing</Heading>
-            <Heading fontStyle="italic">that&apos;s simple & free</Heading>
+            <Heading size="2xl">Crypto invoicing</Heading>
+            <Heading size="2xl" fontStyle="italic">that&apos;s simple & free</Heading>
           </Box>
-          <Text maxWidth={400}>
+          <Heading size="md" fontWeight="normal" maxWidth={500} color="charcoal">
             Smart Invoice is an easy-to-use tool that provides web3 freelancers
             with cryptocurrency invoicing, escrow, and arbitration.
-          </Text>
-          <Button background="blue.1" maxWidth={164} paddingY={6}>
+          </Heading>
+          <Button background="blue.1" maxWidth={164} paddingY={6} _hover={{ background: 'blue.hover.1' }}>
             Open dApp
           </Button>
           <Text
@@ -50,7 +52,7 @@ export function HeroSection({ ...props }) {
         </VStack>
 
         {/* Image */}
-        <Box background="grey" width={536} height={451} />
+        <NextImage src={heroImg} width={600} height={453.24} objectFit="cover" />
       </Flex>
     </Flex>
   );

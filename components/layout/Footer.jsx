@@ -8,6 +8,7 @@ import {
   Input,
   Link,
   Text,
+  useToast,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
@@ -19,6 +20,7 @@ export function Footer({ ...props }) {
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [flexDirection, setFlexDirection] = useState('row')
+  const toast = useToast()
 
   useEffect(() => {
     if (window) {
@@ -47,6 +49,16 @@ export function Footer({ ...props }) {
         body: JSON.stringify({ email }),
       })
       console.log("Submitted")
+      const toastId = "email-submitted"
+      if (!toast.isActive(toastId)) {
+        toast({
+          id: toastId,
+          duration: 3000,
+          position: "bottom",
+          status: "success",
+          title: "Email submitted!"
+        })
+      }
       setEmail('')
     } catch (error) {
       console.error(error)
@@ -55,7 +67,7 @@ export function Footer({ ...props }) {
   }
 
   return (
-    <Box background="blue.dark">
+    <Flex direction='column' background="blue.dark" width='100%' align='center'>
       <Flex
         direction={flexDirection}
         justify="space-between"
@@ -63,6 +75,8 @@ export function Footer({ ...props }) {
         paddingX={20}
         paddingY={10}
         gap={10}
+        width="100%"
+        maxWidth={1400}
         {...props}
       >
         <Box textColor="white">
@@ -107,6 +121,7 @@ export function Footer({ ...props }) {
               borderLeftRadius={0}
               paddingX={10}
               isLoading={submitting}
+              _hover={{ background: 'blue.hover.1' }}
             >
               Add me!
             </Button>
@@ -122,6 +137,7 @@ export function Footer({ ...props }) {
         paddingY={4}
         textColor="white"
         rowGap={4}
+        width="100%"
         {...props}
       >
         <NextImage src={logo} width={160} height={25.34} />
@@ -140,6 +156,6 @@ export function Footer({ ...props }) {
           </NextLink>
         </Flex>
       </Flex>
-    </Box>
+    </Flex>
   );
 }
