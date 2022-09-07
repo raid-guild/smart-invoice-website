@@ -52,21 +52,21 @@ export function NavBar({ ...props }) {
             <NextLink href="/" passHref>
               <Link>Home</Link>
             </NextLink>
-            <NextLink href="https://help.smartinvoice.xyz" passHref>
+            <NextLink href="https://help.smartinvoice.xyz" target="_blank" passHref>
               <Link target='_blank'>Documentation</Link>
             </NextLink>
-            <NextLink href="https://help.smartinvoice.xyz/article/7-get-support" passHref>
-              <Link>Support</Link>
+            <NextLink href="https://help.smartinvoice.xyz/article/7-get-support" target="_blank" passHref>
+              <Link target="_blank">Support</Link>
             </NextLink>
           </Flex>
         )}
 
         {/* App Button */}
         <Flex width={250} justify='right'>
-          <NextLink href="https://app.smartinvoice.xyz" passHref>
-            <Button background="blue.1" textColor="white" borderRadius={8} _hover={{ background: 'blue.hover.1' }}>
+          <NextLink href="https://app.smartinvoice.xyz" target="_blank" passHref>
+            <Link as={Button} background="blue.1" textColor="white" borderRadius={8} _hover={{ background: 'blue.hover.1' }} target="_blank">
               Open dApp
-            </Button>
+            </Link>
           </NextLink>
         </Flex>
       </Flex>
@@ -77,11 +77,11 @@ export function NavBar({ ...props }) {
           <NextLink href="/" passHref>
             <Link>Home</Link>
           </NextLink>
-          <NextLink href="https://docs.smartinvoice.xyz" passHref>
+          <NextLink href="https://docs.smartinvoice.xyz" target="_blank" passHref>
             <Link target='_blank'>Documentation</Link>
           </NextLink>
-          <NextLink href="https://docs.smartinvoice.xyz/docs/FAQ" passHref>
-            <Link>Support</Link>
+          <NextLink href="https://docs.smartinvoice.xyz/docs/FAQ" target="_blank" passHref>
+            <Link target="_blank">Support</Link>
           </NextLink>
         </Flex>
       )}
