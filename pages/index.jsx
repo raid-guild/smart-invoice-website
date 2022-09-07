@@ -11,10 +11,11 @@ import { HeroSection } from '../components/home/Hero';
 import { Layout } from '../components/layout/Layout';
 import { StoryOverviewSection } from '../components/home/StoryOverview';
 import { Testimonials } from '../components/home/Testimonials';
+import { HomeMeta } from '../components/layout/Head';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="Smart Invoice | Crypto Invoicing & Escrow Software" metatags={<HomeMeta/>}>
       <HeroSection maxWidth={1400} />
       <FeatureCrypto maxWidth={1400} />
       <FeatureInvoice maxWidth={1400} />
