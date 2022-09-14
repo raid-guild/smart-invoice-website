@@ -12,8 +12,7 @@ export function FeatureCrypto({ ...props }) {
       <Flex direction='column' align='center' padding={20} width="100%" textAlign='center' {...props}>
         <Heading mb={2}>Accept cryptocurrency payments for your work</Heading>
         <Text mb={10}>
-          Choose from 30+ tokens to get paid with, including ETH, USDC, xDAI,
-          and more!
+          Choose from 17 tokens to get paid with, including USDT, USDC, WETH, RAI and more!
         </Text>
         <Grid
           gridTemplateColumns="repeat(auto-fit, minmax(200px, 1fr))"

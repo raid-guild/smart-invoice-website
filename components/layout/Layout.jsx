@@ -10,7 +10,7 @@ export function Layout({ children, metatags, title }) {
   return (
     <Flex direction="column" minHeight="100vh">
       <Head>
-        <meta charset="UTF-8"/>
+        <meta charSet="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{title}</title>
         {metatags}
