@@ -6,6 +6,7 @@ import {
   AccordionPanel,
   Flex,
   Heading,
+  Link,
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
@@ -63,7 +64,7 @@ export function FAQSection() {
               Smart Invoice supports Ethereum Mainnet, Gnosis Chain, Rinkeby Testnet.
             </Text>
             <Text>
-              Smart Invoice is built to accept any ERC-20 token. The most common are ETH, USDT, USDC, DAI, and BUSD. Smart invoice is also built to accept xDAI.
+              17 tokens are currently available including USDT, USDC, WETH, and DAI. View the full list <Link textColor="blue.1" href='https://help.smartinvoice.xyz/article/30-what-cryptocurrencies-does-smart-invoice-support' target="_blank" isExternal>here</Link>.
             </Text>
           </AccordionPanel>
         </AccordionItem>
