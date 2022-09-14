@@ -14,13 +14,13 @@ import NextLink from 'next/link';
 import NextImage from 'next/image';
 import React, { useEffect, useState } from 'react';
 
-import imgConnectWallet from '../../public/product/si-connect-wallet-mockup.svg'
-import imgCreateInvoice from '../../public/product/si-create-invoice-mockup.svg'
-import imgDepositFunds from '../../public/product/si-deposit-funds-mockup.svg'
-import imgFunds from '../../public/product/si-funds-smart-contract-mockup.svg'
-import imgReceive from '../../public/product/si-receive-funds-mockup.svg'
-import imgRelease from '../../public/product/si-release-funds-mockup.svg'
-import imgArbitration from '../../public/product/si-request-arbitration-mockup.svg'
+import imgConnectWallet from '../../public/product/si-connect-wallet-mockup.png'
+import imgCreateInvoice from '../../public/product/si-create-invoice-mockup.png'
+import imgDepositFunds from '../../public/product/si-deposit-funds-mockup.png'
+import imgFunds from '../../public/product/si-funds-smart-contract-mockup.png'
+import imgReceive from '../../public/product/si-receive-funds-mockup.png'
+import imgRelease from '../../public/product/si-release-funds-mockup.png'
+import imgArbitration from '../../public/product/si-request-arbitration-mockup.png'
 
 export function DemoSection({ ...props }) {
   const [flexDirection, setFlexDirection] = useState('row')
@@ -136,7 +136,7 @@ export function DemoSection({ ...props }) {
           </Accordion>
 
           {/* Image */}
-          <NextImage src={demoItems[active].img} width={750} />
+          <NextImage src={demoItems[active].img} width={800} height={643.55} />
         </Flex>
       </Box>
     </Flex>
