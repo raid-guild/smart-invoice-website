@@ -1,7 +1,8 @@
-import { Box, Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Link, Text, VStack } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import NextImage from "next/image";
-import heroImg from '../../public/assets/home/hero-image.svg'
+import NextLink from "next/link";
+import heroImg from '../../public/assets/home/hero-image.svg';
 
 export function HeroSection({ ...props }) {
   const [flexDirection, setFlexDirection] = useState('row')
@@ -38,9 +39,13 @@ export function HeroSection({ ...props }) {
             Smart Invoice is an easy-to-use tool that provides web3 freelancers
             with cryptocurrency invoicing, escrow, and arbitration.
           </Heading>
-          <Button background="blue.1" maxWidth={164} paddingY={6} _hover={{ background: 'blue.hover.1' }}>
-            Open dApp
-          </Button>
+          <NextLink href="https://app.smartinvoice.xyz" target="_blank" passHref>
+            <a target="_blank">
+              <Link as={Button} background="blue.1" textColor="white" width={164} paddingY={6} _hover={{ background: 'blue.hover.1' }} target="_blank" isExternal>
+                Open dApp
+              </Link>
+            </a>
+          </NextLink>
           <Text
             fontSize={12}
             fontWeight={400}

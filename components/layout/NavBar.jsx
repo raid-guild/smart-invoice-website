@@ -64,9 +64,11 @@ export function NavBar({ ...props }) {
         {/* App Button */}
         <Flex width={250} justify='right'>
           <NextLink href="https://app.smartinvoice.xyz" target="_blank" passHref>
-            <Link as={Button} background="blue.1" textColor="white" borderRadius={8} _hover={{ background: 'blue.hover.1' }} target="_blank">
-              Open dApp
-            </Link>
+            <a target="_blank">
+              <Link as={Button} background="blue.1" textColor="white" borderRadius={8} _hover={{ background: 'blue.hover.1' }} target="_blank" isExternal>
+                Open dApp
+              </Link>
+            </a>
           </NextLink>
         </Flex>
       </Flex>

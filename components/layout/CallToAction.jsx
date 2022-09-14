@@ -57,18 +57,20 @@ export function CallToAction({ ...props }) {
             </Flex>
           </Flex>
         </Box>
-        <NextLink href='https://app.smartinvoice.xyz/' passHref>
-          <Button
-            background="white"
-            textColor="gray.dark"
-            fontWeight={700}
-            fontSize={18}
-            paddingY={6}
-            paddingX={8}
-            _hover={{ background: 'rgba(255, 255, 255, 0.7)' }}
-          >
-            Open dApp
-          </Button>
+        <NextLink href='https://app.smartinvoice.xyz/' target="_blank" passHref>
+          <a target="_blank">
+            <Button
+              background="white"
+              textColor="gray.dark"
+              fontWeight={700}
+              fontSize={18}
+              paddingY={6}
+              paddingX={8}
+              _hover={{ background: 'rgba(255, 255, 255, 0.7)' }}
+            >
+              Open dApp
+            </Button>
+          </a>
         </NextLink>
       </Flex>
     </Flex>
