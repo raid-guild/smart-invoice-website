@@ -6,7 +6,7 @@ export function HeroSection({ ...props }) {
     <Flex justify="center" align="center" background="gray.background" width='100%'>
       <VStack
         paddingY={20}
-        paddingX={20}
+        paddingX={8}
         width="100%"
         justify='center'
         align='center'

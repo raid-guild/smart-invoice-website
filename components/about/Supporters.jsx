@@ -29,7 +29,7 @@ export function Supporters({ ...props }) {
 
   return (
     <Flex width='100%' justify='center'>
-      <Box background='white' textAlign='center' padding={20}>
+      <Box background='white' textAlign='center' paddingY={20} paddingX={8}>
         <Heading mb={4}>
           Our Supporters
         </Heading>

@@ -26,7 +26,7 @@ export function Story({ ...props }) {
 
   return (
     <Flex width='100%' justify='center'>
-      <Flex direction='column' gap={4} width='100%' padding={20} {...props}>
+      <Flex direction='column' gap={4} width='100%' paddingY={20} paddingX={8} {...props}>
         <Heading>Our Story</Heading>
         <Grid gridTemplateColumns={`repeat(${columns}, 1fr)`} gap={14} width='100%'>
           <GridItem display='flex' flexDir='column' align='left' gap={4} order={1}>

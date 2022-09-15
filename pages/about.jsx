@@ -11,12 +11,12 @@ import { AboutMeta } from "../components/layout/Head"
 export default function About() {
   return (
     <Layout title="About Smart Invoice" metatags={<AboutMeta/>}>
-      <HeroSection maxWidth={1400} />
-      <Story maxWidth={1400} />
-      <TeamSection maxWidth={1400} />
-      <Supporters maxWidth={1400} />
+      <HeroSection maxWidth={1300} />
+      <Story maxWidth={1300} />
+      <TeamSection maxWidth={1300} />
+      <Supporters maxWidth={1300} />
       {/* <Testimonials maxWidth={1400} /> */}
-      <CallToAction maxWidth={1400} />
+      <CallToAction maxWidth={1300} />
     </Layout>
   )
 }

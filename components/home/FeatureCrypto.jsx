@@ -9,7 +9,7 @@ import secureIcon from '../../public/icons/features/secure.svg';
 export function FeatureCrypto({ ...props }) {
   return (
     <Flex justify="center" align="center" width='100%'>
-      <Flex direction='column' align='center' padding={20} width="100%" textAlign='center' {...props}>
+      <Flex direction='column' align='center' paddingY={20} paddingX={8} width="100%" textAlign='center' {...props}>
         <Heading mb={2}>Accept cryptocurrency payments for your work</Heading>
         <Text mb={10}>
           Choose from 17 tokens to get paid with, including USDT, USDC, WETH, DAI and more!

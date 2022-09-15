@@ -36,9 +36,11 @@ export function FeatureArbitration({ ...props }) {
     <Flex justify="center" align="center" overflowX='hidden'>
       <Flex
         direction={flexDirection}
-        padding={20}
+        paddingY={20}
+        paddingX={8}
         justify="space-between"
         align={flexDirection === 'column' && 'center'}
+        textAlign={flexDirection === 'column' ? 'center' : 'left'}
         gap={10}
         width="100%"
         {...props}
@@ -51,7 +53,7 @@ export function FeatureArbitration({ ...props }) {
           <Heading mb={6}>without the stress.</Heading>
         </Box>
 
-        <Grid gridTemplateColumns={`repeat(${columns}, 260px)`} gap={8} rowGap={10}>
+        <Grid gridTemplateColumns={columns === 1 ? `repeat(${columns}, minmax(260px, 360px))` : `repeat(${columns}, 260px)`} gap={8} rowGap={10}>
           <GridItem>
             <Icon
               as={CustomIcon}

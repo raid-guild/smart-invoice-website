@@ -29,7 +29,8 @@ export function StoryOverviewSection({ ...props }) {
     <Flex justify="center" align="center" background="gray.background">
       <Flex
         direction={flexDirection}
-        padding={20}
+        paddingY={20}
+        paddingX={8}
         justify="space-between"
         gap={10}
         background="gray.background"

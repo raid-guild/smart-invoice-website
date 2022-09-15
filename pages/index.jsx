@@ -16,16 +16,16 @@ import { HomeMeta } from '../components/layout/Head';
 export default function Home() {
   return (
     <Layout title="Smart Invoice | Crypto Invoicing & Escrow Software" metatags={<HomeMeta/>}>
-      <HeroSection maxWidth={1400} />
-      <FeatureCrypto maxWidth={1400} />
-      <FeatureInvoice maxWidth={1400} />
-      <FeatureEscrow maxWidth={1400} />
-      <FeatureArbitration maxWidth={1400} />
-      <Testimonials maxWidth={1400} />
-      <DemoSection maxWidth={1400} />
-      <StoryOverviewSection maxWidth={1400} />
-      <FAQSection maxWidth={1400} />
-      <CallToAction maxWidth={1400} />
+      <HeroSection maxWidth={1300} />
+      <FeatureCrypto maxWidth={1300} />
+      <FeatureInvoice maxWidth={1300} />
+      <FeatureEscrow maxWidth={1300} />
+      <FeatureArbitration maxWidth={1300} />
+      <Testimonials maxWidth={1300} />
+      <DemoSection maxWidth={1300} />
+      <StoryOverviewSection maxWidth={1300} />
+      <FAQSection maxWidth={1300} />
+      <CallToAction maxWidth={1300} />
     </Layout>
   );
 }

@@ -80,7 +80,7 @@ export function TeamSection({...props}) {
   ]
 
   return (
-    <Box background='blue.dark' textColor='white' padding={20}>
+    <Box background='blue.dark' textColor='white' paddingY={20} paddingX={8}>
       <Heading textAlign='center' textColor='white' mb={4}>
         A team of exceptional people
       </Heading>

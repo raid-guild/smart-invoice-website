@@ -14,7 +14,7 @@ import NextLink from 'next/link';
 
 export function FAQSection() {
   return (
-    <Flex padding={20} direction="column" align="center" overflowX='hidden'>
+    <Flex paddingY={20} paddingX={8} direction="column" align="center" overflowX='hidden'>
       <Heading fontSize={40} textAlign="center">
         Frequently asked questions
       </Heading>

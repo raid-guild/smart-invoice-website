@@ -72,14 +72,14 @@ export function Footer({ ...props }) {
         direction={flexDirection}
         justify="space-between"
         align="center"
-        paddingX={20}
+        paddingX={8}
         paddingY={10}
         gap={10}
         width="100%"
-        maxWidth={1400}
+        maxWidth={1300}
         {...props}
       >
-        <Box textColor="white">
+        <Box textColor="white" textAlign={flexDirection === 'column' ? 'center' : 'left'}>
           <Heading fontSize={32} fontWeight={700} textColor="white" mb={4}>
             Get the web3 freelancer edge
           </Heading>
@@ -133,7 +133,7 @@ export function Footer({ ...props }) {
         direction={flexDirection === 'column' ? 'column-reverse' : 'row'}
         justify="space-between"
         align="center"
-        paddingX={20}
+        paddingX={8}
         paddingY={4}
         textColor="white"
         rowGap={4}

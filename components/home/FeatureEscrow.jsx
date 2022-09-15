@@ -38,7 +38,8 @@ export function FeatureEscrow({ ...props }) {
     <Flex justify="center" overflowX='hidden'>
       <Flex
         direction={flexDirection}
-        padding={20}
+        paddingY={20}
+        paddingX={8}
         justify="space-between"
         align="center"
         gap={10}
@@ -52,8 +53,13 @@ export function FeatureEscrow({ ...props }) {
           </Text>
           <Heading>Protect your money.</Heading>
           <Heading mb={6}>Protect your time.</Heading>
-          <Grid gridTemplateColumns={`repeat(${columns}, minmax(100px, 260px))`} gap={8} rowGap={10}>
-            <GridItem>
+          <Grid gridTemplateColumns={`repeat(${columns}, minmax(100px, 360px))`} gap={8} rowGap={10}>
+            <GridItem
+              display="flex"
+              flexDir="column"
+              alignItems={flexDirection === 'row' ? "flex-start" : "center"}
+              textAlign={flexDirection === 'row' ? "left" : "center"}
+            >
               <Icon
                 as={CustomIcon}
                 width={30}
@@ -65,7 +71,12 @@ export function FeatureEscrow({ ...props }) {
                 trust them yet
               </Text>
             </GridItem>
-            <GridItem>
+            <GridItem
+              display="flex"
+              flexDir="column"
+              alignItems={flexDirection === 'row' ? "flex-start" : "center"}
+              textAlign={flexDirection === 'row' ? "left" : "center"}
+            >
               <Icon
                 as={CustomIcon}
                 width={30}
@@ -76,7 +87,12 @@ export function FeatureEscrow({ ...props }) {
                 Gain the peace of mind that you will get paid if you do the work
               </Text>
             </GridItem>
-            <GridItem>
+            <GridItem
+              display="flex"
+              flexDir="column"
+              alignItems={flexDirection === 'row' ? "flex-start" : "center"}
+              textAlign={flexDirection === 'row' ? "left" : "center"}
+            >
               <Icon
                 as={CustomIcon}
                 width={30}
@@ -88,7 +104,12 @@ export function FeatureEscrow({ ...props }) {
                 end of your project
               </Text>
             </GridItem>
-            <GridItem>
+            <GridItem
+              display="flex"
+              flexDir="column"
+              alignItems={flexDirection === 'row' ? "flex-start" : "center"}
+              textAlign={flexDirection === 'row' ? "left" : "center"}
+            >
               <Icon
                 as={CustomIcon}
                 width={30}

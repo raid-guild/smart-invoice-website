@@ -30,7 +30,7 @@ export function NavBar({ ...props }) {
         justify="space-between"
         align="center"
         height={75}
-        paddingX={8}
+        paddingX={mobile ? 2 : 8}
         paddingY={4}
         background="white"
         textColor="gray.dark"
@@ -75,7 +75,7 @@ export function NavBar({ ...props }) {
 
       {/* Navigation Links */}
       {mobile && (
-        <Flex gap={8} justify="center" align="center">
+        <Flex gap={8} justify="center" align="center" paddingBottom={4}>
           <NextLink href="/" passHref>
             <Link>Home</Link>
           </NextLink>

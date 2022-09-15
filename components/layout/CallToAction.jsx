@@ -30,7 +30,8 @@ export function CallToAction({ ...props }) {
         justify="space-between"
         align="center"
         background="blue.1"
-        padding={20}
+        paddingY={20}
+        paddingX={8}
         width="100%"
         {...props}
       >

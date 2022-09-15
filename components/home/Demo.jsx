@@ -81,7 +81,7 @@ export function DemoSection({ ...props }) {
 
   return (
     <Flex justify="center" align="center" overflowX='hidden'>
-      <Box padding={20} width="100%" {...props}>
+      <Box paddingY={20} paddingX={8} width="100%" {...props}>
         <Flex direction={flexDirection} justify="space-between" align={flexDirection === 'column' ? 'center' : 'end'} gap={6}>
           <Box maxWidth={700} textAlign={flexDirection === 'column' ? 'center' : 'left'}>
             <Heading mb={2}>Designed for all freelancers</Heading>
