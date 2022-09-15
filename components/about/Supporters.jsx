@@ -36,7 +36,7 @@ export function Supporters({ ...props }) {
         <Text>
           Meet the organizations helping Smart Invoice succeed.
         </Text>
-        <Flex direction={flexDirection} justify='space-evenly' align={alignment} gap={20} mt={10} {...props}>
+        <Flex direction={flexDirection} justify='space-evenly' align={alignment} gap={20} mt={flexDirection === 'column' ? 20 : 10} {...props}>
           <VStack maxWidth={320} gap={8}>
             <NextImage src={rgLogo} width={180} height={47.45} />
             <Text>

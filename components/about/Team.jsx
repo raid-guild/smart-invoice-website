@@ -98,7 +98,6 @@ export function TeamSection({...props}) {
               background='white'
               borderRadius={10}
               padding={8}
-              minHeight={400}
             >
               <NextImage src={member.pfp} width={180} height={180} objectFit='cover' />
               <Heading fontSize={24} textColor='gray.dark' mt={4}>
@@ -131,9 +130,9 @@ export function TeamSection({...props}) {
                 )}
                 {member.github && (
                   <NextLink href={member.github} passHref>
-                    <Flex cursor='pointer'>
+                    <Link cursor='pointer' target='_blank'>
                       <NextImage src={githubIcon} width={48} height={48} />
-                    </Flex>
+                    </Link>
                   </NextLink>
                 )}
                 {member.website && (
