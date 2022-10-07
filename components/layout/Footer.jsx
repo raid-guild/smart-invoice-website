@@ -145,10 +145,10 @@ export function Footer({ ...props }) {
           <NextLink href="/" passHref>
             <Link>Home</Link>
           </NextLink>
-          <NextLink href="https://help.smartinvoice.xyz" target="_blank" passHref>
+          <NextLink href="https://docs.smartinvoice.xyz" target="_blank" passHref>
             <Link target="_blank">Documentation</Link>
           </NextLink>
-          <NextLink href="https://help.smartinvoice.xyz/article/7-get-support" target="_blank" passHref>
+          <NextLink href="https://docs.smartinvoice.xyz/misc/get-support" target="_blank" passHref>
             <Link target="_blank">Support</Link>
           </NextLink>
           <NextLink href="https://twitter.com/SmartInvoiceXYZ" target="_blank" passHref>

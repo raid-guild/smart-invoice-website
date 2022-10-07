@@ -52,10 +52,10 @@ export function NavBar({ ...props }) {
             <NextLink href="/" passHref>
               <Link>Home</Link>
             </NextLink>
-            <NextLink href="https://help.smartinvoice.xyz" target="_blank" passHref>
+            <NextLink href="https://docs.smartinvoice.xyz" target="_blank" passHref>
               <Link target='_blank'>Documentation</Link>
             </NextLink>
-            <NextLink href="https://help.smartinvoice.xyz/article/7-get-support" target="_blank" passHref>
+            <NextLink href="https://docs.smartinvoice.xyz/misc/get-support" target="_blank" passHref>
               <Link target="_blank">Support</Link>
             </NextLink>
           </Flex>
@@ -82,7 +82,7 @@ export function NavBar({ ...props }) {
           <NextLink href="https://docs.smartinvoice.xyz" target="_blank" passHref>
             <Link target='_blank'>Documentation</Link>
           </NextLink>
-          <NextLink href="https://docs.smartinvoice.xyz/docs/FAQ" target="_blank" passHref>
+          <NextLink href="https://docs.smartinvoice.xyz/misc/get-support" target="_blank" passHref>
             <Link target="_blank">Support</Link>
           </NextLink>
         </Flex>
