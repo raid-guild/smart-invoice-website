@@ -49,13 +49,19 @@ export function StoryOverviewSection({ ...props }) {
           </Heading>
           <Flex gap={2}>
             <Flex mr={4} align="center">
-              <NextImage src={rgLogo} />
+              <Link href="https://www.raidguild.org/" isExternal>
+                <NextImage src={rgLogo} />
+              </Link>
             </Flex>
             <Flex align="center">
-              <NextImage src={mdLogo} />
+              <Link href="https://molochdao.com/" isExternal>
+                <NextImage src={mdLogo} />
+              </Link>
             </Flex>
             <Flex align="center">
-              <NextImage src={ldLogo} />
+              <Link href="https://www.lexdao.coop/" isExternal>
+                <NextImage src={ldLogo} />
+              </Link>
             </Flex>
           </Flex>
         </Box>

@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Heading, Grid, VStack, GridItem } from "@chakra-ui/layout";
+import { Box, Flex, Text, Heading, Grid, VStack, GridItem, Link } from "@chakra-ui/layout";
 import { useEffect, useState } from "react";
 
 import NextImage from "next/image";
@@ -31,7 +31,7 @@ export function Story({ ...props }) {
         <Grid gridTemplateColumns={`repeat(${columns}, 1fr)`} gap={14} width='100%'>
           <GridItem display='flex' flexDir='column' align='left' gap={4} order={1}>
             <Text>
-              In October 2020, a development service DAO by the name of RaidGuild realized they had a problem: there was no easy, or affordable, way to safely transact with their web3 clients.
+              In October 2020, a development service DAO by the name of <Link href="https://raidguild.org" textDecor="none" color="blue.1" isExternal>RaidGuild</Link> realized they had a problem: there was no easy, or affordable, way to safely transact with their web3 clients.
             </Text>
             <Text>
               Without the safeguards of the traditional banking system, a simple mistake when transferring cryptocurrencies could result in all funds being lost forever. Not ideal for the DAO, or the client.
